@@ -1,0 +1,124 @@
+/* Root theme */
+:root {
+    --hero-gradient-start: #0a58ca; /* darker blue for better contrast */
+    --hero-gradient-end: #031831;  /* deep navy */
+}
+
+.hero-section {
+    background: linear-gradient(135deg, var(--hero-gradient-start), var(--hero-gradient-end));
+    position: relative;
+}
+
+/* Improve readability on blue hero */
+.hero-section .display-5 {
+    color: #ffffff;
+    text-shadow: 0 2px 6px rgba(0, 0, 0, 0.35);
+}
+.hero-section .lead {
+    color: #e9eef6;
+    text-shadow: 0 1px 3px rgba(0, 0, 0, 0.25);
+}
+
+.hero-card {
+    background: rgba(255, 255, 255, 0.95);
+}
+
+.hero-avatar {
+    width: 120px;
+    height: 120px;
+    object-fit: cover;
+}
+
+.section-padding {
+    padding-top: 80px;
+    padding-bottom: 80px;
+}
+
+.section-title {
+    font-weight: 700;
+    margin-bottom: 20px;
+}
+
+.project-card .project-thumb {
+    background-size: cover;
+    background-position: center;
+    border-top-left-radius: .5rem;
+    border-top-right-radius: .5rem;
+}
+
+.info-card {
+    background-color: #fff;
+}
+
+/* Timeline */
+.timeline {
+    position: relative;
+    padding-left: 20px;
+}
+.timeline::before {
+    content: "";
+    position: absolute;
+    left: 8px;
+    top: 0;
+    bottom: 0;
+    width: 2px;
+    background: rgba(13, 110, 253, 0.25);
+}
+.timeline-item {
+    position: relative;
+    margin-bottom: 24px;
+}
+.timeline-point {
+    position: absolute;
+    left: 0;
+    top: 10px;
+    width: 18px;
+    height: 18px;
+    border-radius: 50%;
+}
+.timeline-content {
+    margin-left: 24px;
+}
+
+/* Code card */
+.code-card pre {
+    background-color: #0b213f;
+    color: #d1e7ff;
+    border-radius: .5rem;
+    padding: 16px;
+    overflow: auto;
+}
+
+/* Back to top */
+.back-to-top {
+    position: fixed;
+    right: 16px;
+    bottom: 16px;
+    width: 40px;
+    height: 40px;
+    display: grid;
+    place-items: center;
+    border-radius: 50%;
+    background: #0d6efd;
+    color: #fff;
+    text-decoration: none;
+    box-shadow: 0 0.5rem 1rem rgba(0,0,0,.15);
+    opacity: 0;
+    visibility: hidden;
+    transition: all .2s ease-in-out;
+}
+.back-to-top.show {
+    opacity: 1;
+    visibility: visible;
+}
+
+/* Social links */
+.social-links a {
+    font-size: 1.25rem;
+}
+
+/* Utilities */
+.bg-primary-subtle {
+    background-color: rgba(13, 110, 253, .15) !important;
+}
+
